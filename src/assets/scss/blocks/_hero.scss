@@ -1,0 +1,93 @@
+.hero {
+    position: relative;
+}
+
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+
+    &__item>span{
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 1.43;
+        letter-spacing: 0.1em;
+        display: block;
+        margin-bottom: 10px;
+        max-width: 686px;   
+    }
+}
+
+.hero__inner__item {
+
+}
+
+.hero__inner__item__title {
+    font-weight: 400;
+    font-family: var(--third-family);
+    max-width: 983px;
+    font-size: 74px;
+    line-height: 1.22;
+    color: var(--font-color);
+    display: block;
+    margin-bottom: 35px;
+
+    & span{
+        display: block;
+        font-weight: 800;
+    }
+}
+
+.hero__inner__subtitle {
+    display: block;
+    max-width: 549px;
+    font-family: var(--third-family);
+    font-size: 18px;
+    line-height: 1.56;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.hero__inner__item__link {
+    color: var(--light-color);
+    padding: 22px 23px;
+    // padding-right: 82px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    column-gap: 34px;
+    background-color: var(--accent-color);
+    border-radius: 14px;
+    max-width: 218px;
+
+    &:after{
+        display: inline-flex;
+        content: '';
+        background-image: url('data:image/svg+xml, %3Csvg%20width=%2225%22%20height=%2222%22%20viewBox=%220%200%2025%2022%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M17.3387%206.63135L7.39551%2015.3666%22%20stroke=%22white%22%20stroke-width=%221.7%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20/%3E%20%20%20%3Cpath%20d=%22M10.3584%206.5874L17.3387%206.63064L17.389%2012.7639%22%20stroke=%22white%22%20stroke-width=%221.7%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20/%3E%20%3C/svg%3E');
+        width: 24px;
+        height: 21px;
+        transition: transform 0.3s linear;
+    }
+
+    &:hover:after{
+        transform: rotate(40deg);
+    }
+}
+.hero__bg{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    max-width: 1920px;
+    height: auto;
+}
+
+.project__subtitle{
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}

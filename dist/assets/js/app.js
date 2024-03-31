@@ -1,0 +1,1 @@
+new Swiper(".industries__swiper",{loop:!0,slidesPerView:4,spaceBetween:50,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});

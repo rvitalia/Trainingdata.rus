@@ -13,7 +13,7 @@ html,body{
   // background: #f2f2f2;
   // color: #191919;
    margin: 0;
-  //  font-family: var(--font-family);
+  font-family: var(--font-family);
 }
 
 .main{
@@ -26,6 +26,11 @@ html,body{
 @import 'blocks/container';
 @import 'blocks/page';
 @import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/brands';
+@import 'blocks/services';
+@import 'blocks/industry';
+@import 'blocks/countries';
 @import 'blocks/footer';
 
 

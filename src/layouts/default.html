@@ -16,6 +16,26 @@
 
     </div>
     <script src="assets/js/app.js"></script>
-</body>
-</html>
+    <script>
+        function addClassAndDisplay(element, className, targetSelector) {
+            var target = element.querySelector(targetSelector);
+            if (target) {
+                target.classList.add(className);
+                setTimeout(() => {
+                    target.style.maxHeight = '1000px'; // Устанавливаем максимальную высоту для плавного раскрытия
+                }, 50); // Небольшая задержка для применения изменений
+            }
+        }
 
+        function removeClassAndHide(element, className, targetSelector) {
+            var target = element.querySelector(targetSelector);
+            if (target) {
+                target.style.maxHeight = '0'; // Устанавливаем нулевую высоту для плавного скрытия
+                    target.classList.remove(className);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.brands {}
+
+.brands__inner {}
+
+.brands__inner__title {}
+
+.brands__inner__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: clamp(30px, 4vw, 80px);
+    row-gap: 20px;
+    flex-wrap: wrap;
+}

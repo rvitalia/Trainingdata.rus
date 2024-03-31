@@ -1,0 +1,77 @@
+.industry{
+    padding-bottom: 140px;
+}
+.industries__swiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.industries__swiper {
+    margin: 0 -50px !important;
+    padding: 0 50px !important;
+
+    & .swiper-button-prev,
+    & .swiper-button-next {
+        height: 40px;
+        width: 40px;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+
+        &::after {
+            width: 12px;
+            height: 20px;
+            content: '' !important;
+            color: var(--light-color);
+            background-image: url('data:image/svg+xml,%3Csvg%20width=%2213%22%20height=%2222%22%20viewBox=%220%200%2013%2022%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20fill-rule=%22evenodd%22%20clip-rule=%22evenodd%22%20d=%22M12.5609%2018.9395L10.4396%2021.0608L0.378906%2011.0001L10.4396%200.939453L12.5609%203.06077L4.62155%2011.0001L12.5609%2018.9395Z%22%20fill=%22white%22%20/%3E%20%3C/svg%3E');
+        }
+    }
+
+    & .swiper-button-next:after {
+        transform: rotate(180deg);
+        position: relative;
+        right: -2px;
+        bottom: -1px;
+        // background-image: url('data:image/svg+xml,%3Csvg%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20fill-rule=%22evenodd%22%20clip-rule=%22evenodd%22%20d=%22M14.3788%2012.0001L6.43945%204.06077L8.56077%201.93945L18.6214%2012.0001L8.56077%2022.0608L6.43945%2019.9395L14.3788%2012.0001Z%22%20fill=%22white%22%20/%3E%20%3C/svg%3E');
+    }
+}
+
+.industries__swiper .swiper-slide {
+    display: flex;
+    height: auto;
+
+    & .industries__inner__slide {
+        display: flex;
+        flex-direction: column;
+
+
+        & p {
+            flex-grow: 1;
+        }
+    }
+}
+
+.industries__inner__slide {
+    padding: 20px;
+    color: var(--text-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.industries__inner__slide__img {
+    max-width: 55px;
+    margin-bottom: 20px;
+}
+
+.industries__inner__slide h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 145%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.industries__inner__slide p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 156%;
+}

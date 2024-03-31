@@ -1,40 +1,89 @@
 *,
 *::before,
-*::after{
-    box-sizing: border-box;
+*::after {
+  box-sizing: border-box;
 }
+
 img {
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
-  }
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
 a {
-    text-decoration: none;
-    color: inherit;
-  }
-  .btn-reset {
-    border: none;
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .list-reset {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  // .background-center{
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  // }
+  text-decoration: none;
+  color: inherit;
+}
 
-  .h-reset{
-    margin: 0;
-    font-size: inherit;
-  }
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
 
-  .flex{
-    display: flex;
-    align-items: center;
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// .background-center{
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+.h-reset {
+  margin: 0;
+  font-size: inherit;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.--accent {
+  color: var(--accent-color);
+}
+
+.pt130 {
+  padding-top: 130px;
+}
+
+.project__title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 143%;
+  color: var(--font-color);
+
+}
+
+// section{
+//   width: 100%;
+//   max-width: 1800px;
+//   margin: 0 auto;
+// }
+
+.link__more {
+  width: 100%;
+  max-width: 187px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: #5970f6;
+  border-bottom:  1px solid var(--accent-color);
+  padding-bottom: 7px;
+
+  &:after {
+    content: '';
+    background-image: url('data:image/svg+xml,%3Csvg%20width=%2214%22%20height=%2212%22%20viewBox=%220%200%2014%2012%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M8%2011L13.0008%206L8%201%22%20stroke=%22#5970F6%22%20stroke-width=%222%22%20/%3E%20%20%20%3Cpath%20d=%22M13.0008%206H0%22%20stroke=%22#5970F6%22%20stroke-width=%222%22%20/%3E%20%3C/svg%3E');
+    width: 14px;
+    height: 11px;
+    display: inline-flex;
   }
+}
