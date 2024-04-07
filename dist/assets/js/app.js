@@ -1,1 +1,1 @@
-new Swiper(".industries__swiper",{loop:!0,slidesPerView:4,spaceBetween:50,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});
+new Swiper(".industries__swiper",{loop:!0,slidesPerView:4,spaceBetween:50,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}}),new Swiper(".swiper__reviews",{loop:!0,slidesPerView:3,spaceBetween:45,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});

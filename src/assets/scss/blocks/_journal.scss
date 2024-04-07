@@ -1,0 +1,38 @@
+.journal {
+
+    & .container{
+        position: relative;
+    }
+}
+
+.journal__inner {
+}
+.journal__inner__row {
+}
+.services__inner__row {
+}
+.journal__inner__row__link {
+}
+.journal__inner__bottom {
+}
+.journal__inner__bottom__item {
+}
+.journal__inner__bottom__item__image {
+    position: relative;
+
+    &>p{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
+}
+.journal__inner__bottom__item__author {
+    padding-left: 24px;
+}
+.journal__inner__bottom__item__content {
+}
+.journal__inner__bottom__item__link{
+    max-width: 100%;
+    border-bottom: none;
+}

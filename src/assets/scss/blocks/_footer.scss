@@ -1,0 +1,41 @@
+footer {
+    background: #1a2947;
+    padding: 60px 0px 40px;
+}
+
+.footer__inner__right__item {
+    color: #fff;
+}
+
+.footer-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.menu-item {
+    font-weight: 600;
+    font-size: 14px;
+    color: #e0e0e0;
+
+    &  + &{
+        margin-top: 12px;
+    }
+}
+
+.footer__inner__right__copyright{
+    padding-left: 200px;
+}
+
+.footer__inner__right__copyright::before{
+    content: "";
+    height: 1px;
+    width: 100vw;
+    background-color: #5970f6;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 1;
+}
