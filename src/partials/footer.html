@@ -1,21 +1,29 @@
-<footer style="background-image: url(./assets/images/footer/Graphic.svg); background-repeat: no-repeat; background-position: right 50%; background-size: contain; max-width: 1920px; margin-left: auto; margin-right: auto; width: 100%;">
-    <div class="container footer__inner" style="display: flex; column-gap: 20px; justify-content: space-between; position: relative;">
-        <div class="footer__inner__left" style="display: flex; flex-direction: column; row-gap: 28px; max-width: 312px;">
+<footer
+    style="background-image: url(./assets/images/footer/Graphic.svg); background-repeat: no-repeat; background-position: right 50%; background-size: contain; max-width: 1920px; margin-left: auto; margin-right: auto; width: 100%;">
+    <div class="container footer__inner"
+        style="display: flex; gap: 20px; justify-content: space-between; position: relative;">
+        <div class="footer__inner__left"
+            style="display: flex; flex-direction: column; row-gap: 28px; max-width: 312px;">
             <a href="" class="footer__inner__left__logo">
                 <img src="./assets/images/footer/logo.svg" alt="logo" width="152" height="69">
             </a>
-            <p class="footer__inner__left__text h-reset" style="font-size: 14px; font-weight: 400; line-height: 160%; color: #e0e0e0;">
-                ООО «Рокет Проджект» <br> Юридический адрес: Российская Федерация, 117342, <br> г. Москва, муниципальный округ Коньково, ул. Бутлерова, д. 17Б, этаж 3, пом. XII, ком. 86, оф. 4, к. 76
+            <p class="footer__inner__left__text h-reset"
+                style="font-size: 14px; font-weight: 400; line-height: 160%; color: #e0e0e0;">
+                ООО «Рокет Проджект» <br> Юридический адрес: Российская Федерация, 117342, <br> г. Москва, муниципальный
+                округ Коньково, ул. Бутлерова, д. 17Б, этаж 3, пом. XII, ком. 86, оф. 4, к. 76
             </p>
             <ul class="list-reset" style="display: flex; column-gap: 10px; align-items: center;">
-                <li><a href=""><img src="./assets/images/footer/ic_round-facebook.svg" alt="" width="33" height="33"></a></li>
+                <li><a href=""><img src="./assets/images/footer/ic_round-facebook.svg" alt="" width="33"
+                            height="33"></a></li>
                 <li><a href=""><img src="./assets/images/footer/socials.svg" alt="" width="33" height="33"></a></li>
                 <li><a href=""><img src="./assets/images/footer/mdi_youtube.svg" alt="" width="33" height="33"></a></li>
-                <li><a href=""><img src="./assets/images/footer/mdi_instagram.svg" alt="" width="33" height="33"></a></li>
-                <li><a href=""><img src="./assets/images/footer/ri_twitter-fill.svg" alt="" width="33" height="33"></a></li>
+                <li><a href=""><img src="./assets/images/footer/mdi_instagram.svg" alt="" width="33" height="33"></a>
+                </li>
+                <li><a href=""><img src="./assets/images/footer/ri_twitter-fill.svg" alt="" width="33" height="33"></a>
+                </li>
             </ul>
         </div>
-        <div class="footer__inner__right" style="display: flex; column-gap: 25px; position: relative;">
+        <div class="footer__inner__right" style="display: flex; flex-wrap: wrap; gap: 25px; position: relative;">
             <ul class="footer__inner__right__item list-reset">
                 <li class="footer-title"><a href="">Разметка данных</a></li>
                 <li class="menu-item"><a href="">Разметка изображений</a></li>
@@ -52,10 +60,21 @@
                 <li class="menu-item"><a href="">Политика <br>конфиденциальности</a></li>
                 <li class="menu-item"><a href="">Этапы работы</a></li>
             </ul>
-            <div class="footer__inner__right__copyright" style="position: absolute; bottom: 0; left: 0; z-index: 1; color: white;">
+            <div class="footer__inner__right__copyright"
+                style="position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; color: white;">
                 © 2024 Training Data
             </div>
         </div>
-        <img src="./assets/images/footer/Bg.svg" alt="ring" width="555" height="597" style="position: absolute; top: -100%; left: 0; z-index: 0;">
+        <img src="./assets/images/footer/Bg.svg" alt="ring" width="555" height="597"
+            style="position: absolute; top: -100%; left: 0; z-index: 0;">
     </div>
 </footer>
+
+<script>
+    const burgerBtn = document.getElementById('burger-btn');
+
+    burgerBtn.addEventListener('click', function () {
+        burgerBtn.classList.toggle('burger-close');
+    });
+
+</script>

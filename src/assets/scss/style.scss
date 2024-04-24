@@ -26,6 +26,7 @@ html,body{
 @import 'blocks/container';
 @import 'blocks/page';
 @import 'blocks/header';
+// первая страница
 @import 'blocks/hero';
 @import 'blocks/brands';
 @import 'blocks/services';
@@ -35,6 +36,14 @@ html,body{
 @import 'blocks/about';
 @import 'blocks/reviewes';
 @import 'blocks/journal';
+// конец первой страницы
+// вторая страница
+@import 'blocks/shero';
+
+//страница блога
+@import 'blocks/blog';
+
+
 @import 'blocks/footer';
 
 

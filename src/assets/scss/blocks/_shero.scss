@@ -1,0 +1,49 @@
+.shero__inner__item {
+    font-family: var(--third-family);
+
+    & h1 {
+        font-weight: 400;
+        font-size: 74px;
+        line-height: 108%;
+        color: #222324;
+        padding: 10px 0 28px;
+
+    }
+
+    & p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 156%;
+        color: #222324;
+        padding-bottom: 28px;
+    }
+
+    & img {
+        // width: 100vw;
+        position: absolute;
+        width: auto;
+        height: 100%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    & dl{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    & dt {
+        font-weight: 800;
+        font-size: 74px;
+        line-height: 122%;
+    }
+
+    & dd {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 156%;
+        color: #252334;
+    }
+}

@@ -1,10 +1,17 @@
 footer {
     background: #1a2947;
     padding: 60px 0px 40px;
+    overflow: hidden;
 }
 
 .footer__inner__right__item {
     color: #fff;
+
+    // @include mobile{
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     gap: 10px;
+    // }
 }
 
 .footer-title {
@@ -13,6 +20,10 @@ footer {
     line-height: 140%;
     color: #fff;
     margin-bottom: 25px;
+
+    @include mobile {
+        margin-bottom: 10px;
+    }
 }
 
 .menu-item {
@@ -20,16 +31,22 @@ footer {
     font-size: 14px;
     color: #e0e0e0;
 
-    &  + &{
+    &+& {
         margin-top: 12px;
     }
 }
 
-.footer__inner__right__copyright{
+.footer__inner__right__copyright {
     padding-left: 200px;
+
+    @include mobile {
+        position: static !important;
+        padding-left: 0 !important;
+        margin: 0 auto;
+    }
 }
 
-.footer__inner__right__copyright::before{
+.footer__inner__right__copyright::before {
     content: "";
     height: 1px;
     width: 100vw;
@@ -38,4 +55,20 @@ footer {
     top: -20px;
     left: 0;
     z-index: 1;
+}
+
+.footer__inner__right {
+    padding-bottom: 50px;
+
+    @include mobile {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 0;
+    }
+}
+
+.footer__inner {
+    @include tablet {
+        flex-wrap: wrap;
+    }
 }
