@@ -14,10 +14,16 @@
     margin-top: 40px;
     padding-top: 100px !important;
     padding-bottom: 10px !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
     top: -100px;
 
     & .swiper-slide{
         max-width: 440px;
+
+        @media(max-width: 1200px){
+            max-width: none;
+        }
     }
 
     & .swiper-button-prev,
@@ -30,6 +36,10 @@
         left: unset;
         bottom: unset;
         top: 25px;
+
+        @include small-tablet{
+            top: 40px;
+        }
 
         &::after {
             width: 12px;

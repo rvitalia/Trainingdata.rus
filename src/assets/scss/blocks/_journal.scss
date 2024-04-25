@@ -19,6 +19,10 @@
 }
 .journal__inner__bottom__item__image {
     position: relative;
+    
+    &>img{
+        width: 100%;
+    }
 
     &>p{
         position: absolute;
