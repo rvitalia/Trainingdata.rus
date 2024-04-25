@@ -11,4 +11,12 @@
     column-gap: clamp(30px, 4vw, 80px);
     row-gap: 20px;
     flex-wrap: wrap;
+
+    @include small-tablet{
+        gap: 15px;
+
+        & li{
+            max-width: 100px;
+        }
+    }
 }

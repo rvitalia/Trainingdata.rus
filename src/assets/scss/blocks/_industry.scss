@@ -1,5 +1,5 @@
 .industry{
-    padding-bottom: 140px;
+    padding-bottom: clamp(40px, 10vw, 140px);
 }
 .industries__swiper .swiper-wrapper {
     align-items: stretch;
@@ -9,6 +9,11 @@
     margin: 0 -50px !important;
     padding: 0 50px !important;
 
+    @include tablet{
+        margin: unset !important;
+        padding: unset !important;
+    }
+
     & .swiper-button-prev,
     & .swiper-button-next {
         height: 40px;
@@ -16,12 +21,20 @@
         background-color: var(--accent-color);
         border-radius: 50%;
 
+        @include tablet{
+            background: transparent;
+        }
+
         &::after {
             width: 12px;
             height: 20px;
             content: '' !important;
             color: var(--light-color);
             background-image: url('data:image/svg+xml,%3Csvg%20width=%2213%22%20height=%2222%22%20viewBox=%220%200%2013%2022%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20fill-rule=%22evenodd%22%20clip-rule=%22evenodd%22%20d=%22M12.5609%2018.9395L10.4396%2021.0608L0.378906%2011.0001L10.4396%200.939453L12.5609%203.06077L4.62155%2011.0001L12.5609%2018.9395Z%22%20fill=%22white%22%20/%3E%20%3C/svg%3E');
+            
+            @include tablet{
+                background-image: url('data:image/svg+xml,%3Csvg%20width=%2213%22%20height=%2222%22%20viewBox=%220%200%2013%2022%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20fill-rule=%22evenodd%22%20clip-rule=%22evenodd%22%20d=%22M12.5609%2018.9395L10.4396%2021.0608L0.378906%2011.0001L10.4396%200.939453L12.5609%203.06077L4.62155%2011.0001L12.5609%2018.9395Z%22%20fill=%22blue%22%20/%3E%20%3C/svg%3E');
+            }
         }
     }
 
@@ -79,4 +92,10 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 156%;
+}
+
+.industry__inner__row{
+    @include mobile{
+        flex-wrap: wrap;
+    }
 }

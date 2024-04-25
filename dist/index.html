@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div class="page">
+    <div class="page" style="overflow: hidden;">
         <header class="header">
             <div class="container header__inner">
                 <a href="" class="header__inner__logo">
@@ -60,14 +60,17 @@
                     <div class="hero__inner__item">
                         <span class="--accent">Training Data работает с AI компаниями, государственными предприятиями, средним
                             бизнесом и стартапами</span>
-                        <h1 class="hero__inner__item__title">
+                        <h1 class="hero__inner__item__title h-reset">
                             Все виды разметки <span>для машинного обучения</span>
                         </h1>
                         <p class="hero__inner__subtitle">Доверяя работу с данными Training Data, Вы оптимизируете бюджет и метрики
                             ML департаментов Вашего бизнеса</p>
+                            <div class="hero__inner__item mobile">
+                                <img src="./assets/images/hero/cattrainingdata.png" alt="cat" width="552" height="552">
+                            </div>
                         <a href="" class="hero__inner__item__link">Заказать пилот</a>
                     </div>
-                    <div class="hero__inner__item">
+                    <div class="hero__inner__item desktop">
                         <img src="./assets/images/hero/cattrainingdata.png" alt="cat" width="552" height="552">
                     </div>
                 </div>
@@ -134,7 +137,8 @@
                             <h3 class="h-reset">Генерация данных</h3>
                             <p class="h-reset">Выступаем усилением ML команд заказчиков и партнеров, ускоряя и оптимизируя процесс
                                 подготовки данных для AI продуктов и систем. В компании размечают данные 5 in-house команд с 2500+
-                                асессорами</p>
+                                асессорами. Выступаем усилением ML команд заказчиков и партнеров, ускоряя и оптимизируя процесс
+                                подготовки данных для AI продуктов и систем.</p>
                         </div>
                         <div class="services__inner__main__item"
                             style="background-image: url(./assets/images/services/image88066.png);"
@@ -143,7 +147,8 @@
                             <h3 class="h-reset">Модерация контента</h3>
                             <p class="h-reset">Выступаем усилением ML команд заказчиков и партнеров, ускоряя и оптимизируя процесс
                                 подготовки данных для AI продуктов и систем. В компании размечают данные 5 in-house команд с 2500+
-                                асессорами</p>
+                                асессорами.Выступаем усилением ML команд заказчиков и партнеров, ускоряя и оптимизируя процесс
+                                подготовки данных для AI продуктов и систем. </p>
                         </div>
                         <div class="services__inner__main__item"
                             style="background-image: url(./assets/images/services/image8807.png);"
@@ -607,20 +612,27 @@
     <script src="assets/js/app.js"></script>
     <script>
         function addClassAndDisplay(element, className, targetSelector) {
-            var target = element.querySelector(targetSelector);
-            if (target) {
-                target.classList.add(className);
-                setTimeout(() => {
-                    target.style.maxHeight = '1000px'; // Устанавливаем максимальную высоту для плавного раскрытия
-                }, 50); // Небольшая задержка для применения изменений
+            if (window.innerWidth >= 576) {
+                var target = element.querySelector(targetSelector);
+                if (target) {
+                    target.classList.add(className);
+                    let height;
+                    window.innerWidth > 991 ? height = target.offsetHeight + 50 : height = target.offsetHeight + 30;
+
+                    var previousElement = target.previousElementSibling;
+                    previousElement.style.bottom = height + "px";
+                }
             }
         }
 
         function removeClassAndHide(element, className, targetSelector) {
-            var target = element.querySelector(targetSelector);
-            if (target) {
-                target.style.maxHeight = '0'; // Устанавливаем нулевую высоту для плавного скрытия
+            if (window.innerWidth >= 576) {
+                var target = element.querySelector(targetSelector);
+                if (target) {
                     target.classList.remove(className);
+                    var previousElement = target.previousElementSibling;
+                    window.innerWidth > 991 ? previousElement.style.bottom = "50px" : previousElement.style.bottom = "30px";
+                }
             }
         }
 

@@ -19,44 +19,74 @@
 .services__inner__main {
     display: grid;
     gap: 45px;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: center;
     color: var(--light-color);
+    
+    @include tablet{
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    }
 }
 
 .services__inner__main__item {
     @include bg-cover;
     padding: 50px;
     box-shadow: 2px 4px 10px 0 rgba(34, 35, 36, 0.1);
-    border-top: 8px solid #ad0018;;
+    border-top: 8px solid #ad0018;
     min-height: 440px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: relative;
 
-    & h3{
+    @include tablet{
+        min-height: 400px;
+        max-height: 400px;
+        padding: 30px;
+    }
+
+    & h3 {
         font-weight: 800;
         font-size: 28px;
         padding-bottom: 25px;
         transition: all 0.3s linear;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        transition: all 0.3s linear;
+
+        @include tablet{
+            bottom: 30px;
+            left: 30px;
+        }
+
+        @include mobile{
+            position: static;
+            font-size: 20px;
+        }
     }
 
-    & p{
+    & p {
         font-weight: 600;
         font-size: 18px;
         line-height: 140%;
-        max-height: 0;
+        // max-height: 0;
         transition: all 0.3s linear;
         opacity: 0;
         pointer-events: none;
 
-        &.active{
+        &.active {
             opacity: 1;
+        }
+
+        @include mobile{
+            opacity: 1;
+            font-size: 14px;
         }
     }
 }
 
-.services__bg{
+.services__bg {
     position: absolute;
     top: 0;
     left: 50%;

@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div class="page">
+    <div class="page" style="overflow: hidden;">
         {{> header }}
 
         <main class="main">
@@ -18,20 +18,27 @@
     <script src="assets/js/app.js"></script>
     <script>
         function addClassAndDisplay(element, className, targetSelector) {
-            var target = element.querySelector(targetSelector);
-            if (target) {
-                target.classList.add(className);
-                setTimeout(() => {
-                    target.style.maxHeight = '1000px'; // Устанавливаем максимальную высоту для плавного раскрытия
-                }, 50); // Небольшая задержка для применения изменений
+            if (window.innerWidth >= 576) {
+                var target = element.querySelector(targetSelector);
+                if (target) {
+                    target.classList.add(className);
+                    let height;
+                    window.innerWidth > 991 ? height = target.offsetHeight + 50 : height = target.offsetHeight + 30;
+
+                    var previousElement = target.previousElementSibling;
+                    previousElement.style.bottom = height + "px";
+                }
             }
         }
 
         function removeClassAndHide(element, className, targetSelector) {
-            var target = element.querySelector(targetSelector);
-            if (target) {
-                target.style.maxHeight = '0'; // Устанавливаем нулевую высоту для плавного скрытия
+            if (window.innerWidth >= 576) {
+                var target = element.querySelector(targetSelector);
+                if (target) {
                     target.classList.remove(className);
+                    var previousElement = target.previousElementSibling;
+                    window.innerWidth > 991 ? previousElement.style.bottom = "50px" : previousElement.style.bottom = "30px";
+                }
             }
         }
 
