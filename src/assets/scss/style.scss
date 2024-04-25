@@ -13,7 +13,8 @@ html,body{
   // background: #f2f2f2;
   // color: #191919;
    margin: 0;
-  font-family: var(--font-family);
+  // font-family: var(--font-family);
+  font-family: var(--third-family);
 }
 
 .main{
@@ -42,6 +43,8 @@ html,body{
 
 //страница блога
 @import 'blocks/blog';
+//страница блога-single
+@import 'blocks/single';
 
 
 @import 'blocks/footer';
