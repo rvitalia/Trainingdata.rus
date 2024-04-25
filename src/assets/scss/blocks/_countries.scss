@@ -1,5 +1,5 @@
 .countries {
-    padding: 100px 0;
+    padding: clamp(40px, 8vw ,100px) 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: var(--accent-color);
     color: var(--light-color);
@@ -19,12 +19,12 @@
     & h2 {
         font-family: var(--font8);
         font-weight: 700;
-        font-size: 56px;
+        font-size: clamp(25px, 4.5vw, 56px);
         line-height: 143%;
         text-align: center;
         color: #fefefe;
         display: block;
-        margin-bottom: 100px;
+        margin-bottom: clamp(50px, 12vw ,100px);
     }
 }
 
@@ -39,18 +39,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 10px;
+        gap: 10px;
 
         & dt {
             font-weight: 800;
-            font-size: 48px;
+            font-size: clamp(20px, 4.5vw, 48px);
             text-align: center;
             color: #fefefe;
         }
 
         & dd {
             font-weight: 600;
-            font-size: 22px;
+            font-size: clamp(16px, 4.5vw, 22px);
             line-height: 170%;
             text-align: center;
             color: #fefefe;

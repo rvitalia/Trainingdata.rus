@@ -1,11 +1,11 @@
-.cases{
+.cases {
     position: relative;
 }
+
 .cases__inner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    column-gap: 45px;
-    row-gap: 40px;
+    gap: clamp(15px, 4vw, 40px);
 
     &__item {
         padding: 32px 25px;
@@ -38,18 +38,25 @@
     grid-column: 1;
 }
 
-.case__inner__item__title{
+.case__inner__item__title {
     padding-bottom: 13px;
 }
 
-.case__inner__item__text{
+.case__inner__item__text {
     max-width: 247px;
 }
 
-.cases__fone{
+.cases__fone {
     position: absolute;
     left: 0;
     top: 100%;
     transform: translateX(-50%);
     z-index: -1;
+}
+
+.services__inner__row {
+    @include tablet {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
 }
