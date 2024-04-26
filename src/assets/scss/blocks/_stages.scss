@@ -1,11 +1,44 @@
-.stages {}
+.stages {
+    @include small-tablet{
+        padding-top: 0 !important;
+    }
+}
 
-.stages__inner {}
+.stages__inner {
+    @include tablet {
+        display: flex !important;
+        flex-direction: column;
+        position: relative;
+        // margin-top: 20px;
+    }
+}
 
 .stages__inner__item {
+    &:last-child{
+        @include tablet {
+            margin-top: 20px;
+        }
+
+        @include mobile{
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+        }
+
+        & p{
+            color: rgba(17, 27, 79, 0.6);
+        }
+    }
 
     & img {
         transform: scale(1.2);
+
+        @include tablet {
+            transform: translate3d(-50%, -50%, 0);
+            opacity: 0.1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+        }
     }
 
     & span {
@@ -22,6 +55,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include small-tablet{
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        @include mobile{
+            margin-bottom: 0;
+        }
     }
 
     & .stages__inner__item__title {
@@ -30,16 +75,40 @@
         line-height: 156%;
         color: #222324;
         margin-bottom: 8px;
+
+        @include small-tablet{
+            margin-bottom: 0;
+            margin-top: 0;
+        }
     }
 
     & p {
         font-weight: 600;
         font-size: 16px;
         line-height: 156%;
-        color: rgba(17, 27, 79, 0.6);
+
+        @include small-tablet{
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        @include mobile{
+            grid-column: 1/3;
+        }
+    }
+
+    & li{
+        @include mobile{
+            display: grid; grid-template-columns: 40px 1fr;
+            gap: 10px;
+        }
     }
 }
 
 .stages__subtitle {
     margin-bottom: 10px;
+
+    @include mobile{
+        text-align: left;
+    }
 }

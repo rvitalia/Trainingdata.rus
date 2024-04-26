@@ -115,3 +115,11 @@
     right: 0;
     z-index: -1;
 }
+
+.types__inner{
+    & .project__subtitle{
+        @include mobile{
+            text-align: left;
+        }
+    }
+}

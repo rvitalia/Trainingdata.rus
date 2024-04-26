@@ -1,6 +1,12 @@
 .fluence__inner {
     margin-bottom: 60px;
 
+    @include small-tablet {
+        gap: 10px !important;
+        margin-bottom: 40px;
+        margin-top: 20px !important;
+    }
+
     & li {
         border-radius: 10px;
         background: rgba(89, 112, 246, 0.1);
@@ -8,6 +14,11 @@
         display: flex;
         align-items: center;
         gap: 15px;
+
+        @include small-tablet{
+            padding: 12.5px 18px;
+            font-size: 14px;
+        }
     }
 }
 
@@ -21,6 +32,10 @@
     & b {
         display: block;
         font-weight: 600;
+    }
+
+    @include small-tablet{
+        font-size: 14px;
     }
 }
 
