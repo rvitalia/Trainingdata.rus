@@ -1,0 +1,72 @@
+.swiper__types {
+    margin-top: 40px;
+    padding-top: 100px !important;
+    padding-bottom: 10px !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    top: -100px;
+
+    & .swiper-slide {
+        max-width: 440px;
+
+        @media(max-width: 1200px) {
+            max-width: none;
+        }
+    }
+
+    & .swiper-button-prev,
+    & .swiper-button-next {
+        height: 40px;
+        width: 40px;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        right: unset;
+        left: unset;
+        bottom: unset;
+        top: 25px;
+
+        @include small-tablet {
+            top: 40px;
+        }
+
+        &::after {
+            width: 12px;
+            height: 20px;
+            content: '' !important;
+            color: var(--light-color);
+            background-image: url('data:image/svg+xml,%3Csvg%20width=%2213%22%20height=%2222%22%20viewBox=%220%200%2013%2022%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20fill-rule=%22evenodd%22%20clip-rule=%22evenodd%22%20d=%22M12.5609%2018.9395L10.4396%2021.0608L0.378906%2011.0001L10.4396%200.939453L12.5609%203.06077L4.62155%2011.0001L12.5609%2018.9395Z%22%20fill=%22white%22%20/%3E%20%3C/svg%3E');
+        }
+    }
+
+    & .swiper-button-next {
+        right: 0;
+    }
+
+    & .swiper-button-prev {
+        right: 64px;
+    }
+
+    & .swiper-button-next:after {
+        transform: rotate(180deg);
+        position: relative;
+        right: -2px;
+        bottom: -1px;
+        // background-image: url('data:image/svg+xml,%3Csvg%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20fill-rule=%22evenodd%22%20clip-rule=%22evenodd%22%20d=%22M14.3788%2012.0001L6.43945%204.06077L8.56077%201.93945L18.6214%2012.0001L8.56077%2022.0608L6.43945%2019.9395L14.3788%2012.0001Z%22%20fill=%22white%22%20/%3E%20%3C/svg%3E');
+    }
+}
+
+.swiper-slide__types {
+    @include bg-cover;
+    padding-bottom: 70px;
+    color: #fff;
+}
+
+.swiper-slide__types__number {
+    font-weight: 800;
+    font-size: 144px;
+    line-height: 120%;
+    letter-spacing: 0em;
+    opacity: 0.3;
+    // position: relative;
+    // left: -25%;
+}

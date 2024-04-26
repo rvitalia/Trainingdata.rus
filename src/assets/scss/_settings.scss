@@ -53,10 +53,15 @@ a {
 }
 
 .project__title {
-  font-weight: 700;
+  font-weight: 600;
   font-size: clamp(30px, 5vw, 56px);
   line-height: 143%;
   color: var(--font-color);
+
+  & small{
+    font-weight: 400;
+    font-size: inherit;
+  }
 
 }
 
