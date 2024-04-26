@@ -79,7 +79,7 @@
 
 .hero__inner__item__link {
     color: var(--light-color);
-    padding: 22px 23px;
+    padding: clamp(15px, 3.5vw, 22px) clamp(15px, 3.5vw, 23px);
     // padding-right: 82px;
     font-weight: 700;
     font-size: 14px;

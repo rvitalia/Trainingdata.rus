@@ -57,7 +57,7 @@
             
             <section class="shero section" style="z-index: 1; margin-top: 20px;">
                 <div class="container shero__inner container__fluid"
-                    style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); align-items: center; gap: 145px;">
+                    style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); align-items: center; gap: 40px; align-items: center;">
                     <div class="shero__inner__item">
                         <span class="project__subtitle --accent">Автоматическая разметка данных</span>
                         <h1 class="h-reset">Разметка <b>изображений</b></h1>
@@ -65,7 +65,7 @@
                             обучающих датасетов высокого качества</p>
                         <a href="" class="hero__inner__item__link">Заказать пилот</a>
             
-                        <div class="shero__inner__item__row" style="padding-top: 90px; display: flex; gap: 80px;">
+                        <div class="shero__inner__item__row" style="padding-top: clamp(30px, 6vw, 90px); display: flex; gap: clamp(40px, 6vw, 80px);">
                             <dl class="h-reset">
                                 <dt class="--accent">10+</dt>
                                 <dd class="h-reset">Инструментов разметки</dd>
@@ -76,7 +76,7 @@
                             </dl>
                         </div>
                     </div>
-                    <div class="shero__inner__item" style="height: 100%;">
+                    <div class="shero__inner__item" style="height: 100%; display: flex; align-items: center;">
                         <img src="./assets/images/shero/img.png" alt="dataaset" width="960" height="703">
                     </div>
                 </div>
@@ -143,8 +143,7 @@
                                 style="background-image: url(./assets/images/types/Card1.png);">
                                 <span class="swiper-slide__types__number">01</span>
                                 <h3 class="swiper-slide__types__title"><span>01.</span>Bounding box</h3>
-                                <p class="swiper-slide__types__subtitle">Выделение объекта прямоугольником для обозначения
-                                    расположения и размера объекта, не учитывая его форму в деталях</p>
+                                <p class="swiper-slide__types__subtitle">Выделение объекта прямоугольником для обозначения расположения и размера объекта, не учитывая его форму в деталях</p>
                             </div>
                             <div class="swiper-slide swiper-slide__types"
                                 style="background-image: url(./assets/images/types/Card2.png);">
@@ -499,17 +498,21 @@
     },
     breakpoints: {
         // when window width is >= 320px
-        200: {
+        100: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        600: {
           slidesPerView: 2,
           spaceBetween: 20
         },
         // when window width is >= 480px
-        768: {
+        1025: {
           slidesPerView: 3,
           spaceBetween: 30
         },
         // when window width is >= 640px
-        1200: {
+        1350: {
           slidesPerView: 4,
           spaceBetween: 45
         }
