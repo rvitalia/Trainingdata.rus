@@ -64,9 +64,37 @@
 .swiper-slide__types__number {
     font-weight: 800;
     font-size: 144px;
-    line-height: 120%;
+    line-height: 1;
     letter-spacing: 0em;
     opacity: 0.3;
-    // position: relative;
-    // left: -25%;
+    position: relative;
+    left: -12%;
+    top: -8%;
+}
+
+.swiper-slide__types__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0em;
+    color: #fff;
+    padding-left: 67px;
+    position: relative;
+    max-width: max-content;
+
+    & span{
+        position: absolute;
+        left: 20px;
+        // transform: translateX(-100%);
+    }
+}
+
+.swiper-slide__types__subtitle {
+    padding-left: 67px;
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    padding-right: 16px;
 }
