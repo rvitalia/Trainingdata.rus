@@ -1,0 +1,79 @@
+.timeplan__inner__item__img {
+    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    background: rgba(89, 112, 246, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeplan__inner__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    color: #252334;
+}
+
+.timeplan__inner__item {
+    li {
+        display: flex;
+        gap: 16px;
+        max-width: max-content;
+
+        &:nth-child(4)>.timeplan__inner__item__img,
+        &:nth-child(5)>.timeplan__inner__item__img,
+        &:nth-child(6)>.timeplan__inner__item__img {
+            position: relative;
+
+            &:before {
+                background: #5970f6;
+                height: 40px;
+                width: 1px;
+                content: '';
+                position: absolute;
+                bottom: calc(100% + 12px);
+                z-index: -1;
+                left: 50%;
+                // right: 0;
+            }
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            position: relative;
+
+            &::after {
+                content: "";
+                background-image: url('data:image/svg+xml,%3Csvg%20width=%22101%22%20height=%22126%22%20viewBox=%220%200%20101%20126%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M0.000966867%20125L34.501%20125C40.0238%20125%2044.501%20120.523%2044.501%20115L44.501%2011C44.501%205.47718%2048.9782%201.00003%2054.501%201.00003L101.001%201.00005%22%20stroke=%22#5970F6%22%20/%3E%20%3C/svg%3E');
+                width: 78px;
+                // height: 159px;
+                height: 125px;
+                position: absolute;
+                left: 115%;
+                bottom: 55%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.timeplan__inner__item__desc {
+    & dt {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 117%;
+        color: #111b4f;
+        margin-bottom: 10px;
+    }
+
+    & dd {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 162%;
+        color: rgba(17, 27, 79, 0.6);
+    }
+}
