@@ -92,9 +92,13 @@
         column-gap: 16px;
         grid-template-rows: auto;
         // margin-bottom: 32px;
-
+        
         @include small-tablet{
-            column-gap: 0;
+            column-gap: 10px;
+        }
+        
+        @include mobile{
+            grid-template-columns: 50px 1fr;
         }
 
         & .business__inner__item__list__img {
@@ -115,7 +119,7 @@
 
         & .business__inner__item__list__title {
             font-weight: 700;
-            font-size: clamp(16px, 3.5vw, 24px);
+            font-size: clamp(16px, 3vw, 24px);
             line-height: 117%;
             color: #111b4f;
             margin-bottom: 10px;

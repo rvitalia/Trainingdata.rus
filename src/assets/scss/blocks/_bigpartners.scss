@@ -4,9 +4,13 @@
         border: 1px solid #696c76;
         padding: 20px;
 
+        @include mobile{
+            padding: 10px;
+        }
+
         & .bigpartners__inner__title {
             font-weight: 700;
-            font-size: 24px;
+            font-size: clamp(16px,3.5vw,24px);
             line-height: 120%;
             letter-spacing: 0em;
             color: #111b4f;
@@ -17,10 +21,10 @@
         & p {
             display: block;
             font-weight: 400;
-            font-size: 16px;
+            font-size: clamp(14px,2vw,16px);
             line-height: 162%;
             color: #252334;
-            padding-bottom: 100px;
+            padding-bottom: clamp(40px, 6vw, 100px);
         }
     }
 }
@@ -30,4 +34,10 @@
     bottom: -30%;
     right: 0;
     z-index: -1;
+}
+
+.bigpartners__inner{
+    @include small-tablet{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important; 
+    }
 }
