@@ -28,3 +28,17 @@
         padding: 0 15px;
     }
 }
+
+.container__partners{
+    max-width: 1710px;
+    padding: 0 40px;
+    margin-left: auto;
+
+    @include tablet {
+        padding: 0 30px;
+    }
+
+    @include mobile {
+        padding: 0 15px;
+    }
+}
