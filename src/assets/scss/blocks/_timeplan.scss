@@ -6,6 +6,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 576px) {
+        width: 45px;
+        height: 45px;
+        padding: 9                          px;
+    }
 }
 
 .timeplan__inner__subtitle {
@@ -13,13 +19,153 @@
     font-size: 18px;
     line-height: 156%;
     color: #252334;
+    border-radius: 8px;
+
+    @media (max-width: 1250px) {
+        max-width: 464px;
+    }
 }
 
 .timeplan__inner__item {
+
+    @media (max-width: 1250px) {
+        max-width: 840px;
+    }
+
+    @include small-tablet {
+        max-width: 600px;
+    }
+
     li {
         display: flex;
         gap: 16px;
-        max-width: max-content;
+        // max-width: max-content;
+        width: 100%;
+
+        @media (max-width: 1350px) {
+            align-items: center;
+        }
+
+        @include small-tablet {
+            // max-width: max-content;
+            position: relative;
+            z-index: 1;
+            background: rgba(89, 112, 246, 0.1);
+            border-radius: 16px;
+
+            &:nth-child(1) {
+                order: 1;
+
+                &:after {
+                    background: #5970f6;
+                    width: 40px;
+                    height: 1px;
+                    content: '';
+                    position: absolute;
+                    left: calc(100% + 10px);
+                    z-index: -1;
+
+                    @include mobile{
+                        width: 15px;
+                    }
+                }
+
+                &::before {
+                    background-image: url('data:image/svg+xml,%3Csvg%20width=%22101%22%20height=%22126%22%20viewBox=%220%200%20101%20126%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M0.000966867%201.1242L34.501%201.12423C40.0238%201.12424%2044.501%205.60139%2044.501%2011.1242L44.501%20115.124C44.501%20120.647%2048.9782%20125.124%2054.501%20125.124L101.001%20125.124%22%20stroke=%22#5970F6%22%20/%3E%20%3C/svg%3E');
+                    content: '';
+                    position: absolute;
+                    // width: 79px;
+                    width: 55px;
+                    height: 160px;
+                    background-repeat: no-repeat;
+                    left: 100%;
+                    top: 15px;
+                    background-position: center;
+                    z-index: -1;
+                    transform: rotate(90deg);
+
+                    @include mobile{
+                        top: -5px;
+                        width: 35px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                order: 4;
+
+                &::before {
+                    background-image: url('data:image/svg+xml,%3Csvg%20width=%22101%22%20height=%22126%22%20viewBox=%220%200%20101%20126%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M0.000966867%201.1242L34.501%201.12423C40.0238%201.12424%2044.501%205.60139%2044.501%2011.1242L44.501%20115.124C44.501%20120.647%2048.9782%20125.124%2054.501%20125.124L101.001%20125.124%22%20stroke=%22#5970F6%22%20/%3E%20%3C/svg%3E');
+                    content: '';
+                    position: absolute;
+                    // width: 79px;
+                    width: 55px;
+                    height: 160px;
+                    background-repeat: no-repeat;
+                    left: 100%;
+                    top: 15px;
+                    background-position: center;
+                    z-index: -1;
+                    transform: rotate(90deg);
+
+                    @include mobile{
+                        top: -5px;
+                        width: 35px;
+                    }
+                }
+
+                &:after {
+                    background: #5970f6;
+                    width: 40px;
+                    height: 1px;
+                    content: '';
+                    position: absolute;
+                    left: calc(100% + 10px);
+                    z-index: -1;
+
+                    
+                    @include mobile{
+                        width: 15px;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                order: 6;
+
+                &:after {
+                    background: #5970f6;
+                    width: 40px;
+                    height: 1px;
+                    content: '';
+                    position: absolute;
+                    left: calc(100% + 10px);
+                    z-index: -1;
+                    
+                    @include mobile{
+                        width: 15px;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                order: 2;
+
+
+            }
+
+            &:nth-child(5) {
+                order: 5;
+            }
+
+            &:nth-child(6) {
+                order: 6;
+            }
+        }
+
+        @include mobile{
+            padding: 7px 0;
+        }
 
         &:nth-child(4)>.timeplan__inner__item__img,
         &:nth-child(5)>.timeplan__inner__item__img,
@@ -36,6 +182,10 @@
                 z-index: -1;
                 left: 50%;
                 // right: 0;
+
+                @include small-tablet {
+                    display: none;
+                }
             }
         }
 
@@ -46,16 +196,27 @@
             &::after {
                 content: "";
                 background-image: url('data:image/svg+xml,%3Csvg%20width=%22101%22%20height=%22126%22%20viewBox=%220%200%20101%20126%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M0.000966867%20125L34.501%20125C40.0238%20125%2044.501%20120.523%2044.501%20115L44.501%2011C44.501%205.47718%2048.9782%201.00003%2054.501%201.00003L101.001%201.00005%22%20stroke=%22#5970F6%22%20/%3E%20%3C/svg%3E');
-                width: 78px;
+                width: clamp(10px, 4vw, 78px);
+                max-width: 60px;
+                overflow: hidden;
                 // height: 159px;
                 height: 125px;
                 position: absolute;
-                left: 115%;
+                left: 90%;
                 bottom: 55%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
                 z-index: -1;
+
+                @include tablet {
+                    left: 100%;
+                    max-width: 70px;
+                }
+
+                @include small-tablet {
+                    display: none;
+                }
             }
         }
     }
@@ -68,12 +229,59 @@
         line-height: 117%;
         color: #111b4f;
         margin-bottom: 10px;
+
+        @media (max-width: 1350px) {
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+
+        @include mobile{
+            font-size: 18px;
+        }
     }
 
     & dd {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 162%;
         color: rgba(17, 27, 79, 0.6);
+
+        @media (max-width: 1350px) {
+            font-size: 14px;
+        }
+
+        @include mobile{
+            font-size: 12px;
+        }
+    }
+}
+
+.timeplan__inner {
+    @media (max-width: 1250px) {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    & .timeplan__inner__item:last-child {
+        @include small-tablet {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+        }
+        
+        @include mobile{
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
+            gap: 30px !important;
+        }
+    }
+}
+
+.timeplan__bg {
+    display: none;
+
+    @media (max-width: 1250px) {
+        display: block;
+        position: absolute;
+        top: -90px;
+        right: 0;
+        z-index: -1;
     }
 }
