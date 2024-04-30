@@ -19,9 +19,19 @@
 
 .team__inner {
 
+    @include tablet{
+        grid-template-columns: 1fr !important;
+    }
+
     & .team__inner__item:last-child {
         border-top: 1px solid #5970f6;
         padding-top: 40px;
+    }
+
+    & .team__inner__item:first-child{
+        @include tablet{
+            max-width: 400px;
+        }
     }
 }
 
