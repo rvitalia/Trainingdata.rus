@@ -42,3 +42,18 @@
         padding: 0 15px;
     }
 }
+.container__dataset{
+    max-width: 1735px;
+    margin-left: unset;
+    margin-right: auto;
+    padding: 0 40px;
+    // margin-right: 15px;
+
+    @include tablet {
+        padding: 0 30px;
+    }
+
+    @include mobile {
+        padding: 0 15px;
+    }
+}

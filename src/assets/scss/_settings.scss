@@ -104,3 +104,31 @@ section{
     text-align: center;
   }
 }
+
+.white-arrow{
+  width: 40px !important;
+  height: 40px !important;
+  background: var(--accent-color) !important;
+  color: white !important;
+  border-radius: 50%;
+
+  &.swiper-button-next{
+    &:after{
+      right: 0;
+    }
+  }
+  &.swiper-button-prev{
+    &:after{
+      left: calc(50% + 5px);
+      transform: translateX(-50%);
+    }
+  }
+
+  &:after{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    font-size: 24px !important;
+    font-weight: 700;
+  }
+}
