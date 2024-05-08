@@ -1,0 +1,32 @@
+.ddescription {
+    & * {
+        font-family: var(--third-family);
+    }
+
+
+    & .project__title {
+        text-align: left;
+        margin-bottom: 40px;
+
+        & small {
+            display: block;
+        }
+    }
+}
+
+.ddescription__left__list {
+
+    & li {
+        display: block;
+        font-weight: 600;
+        font-size: clamp(14px, 3vw, 20px);
+        color: #595856;
+        margin-bottom: 24px;
+        text-align: left;
+
+        &:not(:first-child) {
+            border-bottom: 2px solid #9a9a9a;
+            padding-bottom: 28px;
+        }
+    }
+}

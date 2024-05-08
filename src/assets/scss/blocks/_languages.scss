@@ -1,0 +1,44 @@
+.languages__list {
+    padding: 0 50px;
+
+    & li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+
+        &:before {
+            content: '';
+            background-image: url('data:image/svg+xml,%3Csvg%20width=%2215%22%20height=%2217%22%20viewBox=%220%200%2015%2017%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cg%20clip-path=%22url(%23clip0_632_1086)%22%3E%20%20%20%20%20%3Cpath%20d=%22M14.6853%203.49958C15.1038%203.91462%2015.1038%204.58532%2014.6853%205.00036L6.11384%2013.5004C5.69531%2013.9154%205.01897%2013.9154%204.60045%2013.5004L0.313795%209.25036C-0.104598%208.83533%20-0.104598%208.16462%200.313795%207.74958C0.732255%207.33454%201.4106%207.33454%201.82913%207.74958L5.32701%2011.2459L13.1719%203.49958C13.5904%203.08388%2014.2667%203.08388%2014.6853%203.49958Z%22%20fill=%22%235970F6%22%20/%3E%20%20%20%3C/g%3E%20%20%20%3Cdefs%3E%20%20%20%20%20%3CclipPath%20id=%22clip0_632_1086%22%3E%20%20%20%20%20%20%20%3Crect%20width=%2215%22%20height=%2217%22%20fill=%22white%22%20/%3E%20%20%20%20%20%3C/clipPath%3E%20%20%20%3C/defs%3E%20%3C/svg%3E');
+            width: 15px;
+            height: 17px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.languages {
+    position: relative;
+
+    & * {
+        font-family: var(--third-family);
+    }
+
+    .project__title {
+        display: block;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+.languages__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

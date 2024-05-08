@@ -57,6 +57,7 @@ a {
   font-size: clamp(30px, 5vw, 56px);
   line-height: 143%;
   color: var(--font-color);
+  text-transform: uppercase;
 
   & small{
     font-weight: 400;
@@ -131,4 +132,20 @@ section{
     font-size: 24px !important;
     font-weight: 700;
   }
+}
+
+html h1{
+  font-size: clamp(34px, 4vw, 54px) !important;
+}
+html h2{
+  font-size: clamp(28px, 2vw, 32px) !important;
+}
+html h3{
+  font-size: clamp(24px, 2vw, 28px) !important;
+}
+html h4{
+  font-size: clamp(20px, 2vw, 24px) !important;
+}
+html h5{
+  font-size: clamp(16px, 2vw, 20px) !important;
 }

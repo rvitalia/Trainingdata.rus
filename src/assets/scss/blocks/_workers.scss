@@ -1,0 +1,45 @@
+.workers {
+    margin-bottom: 20px;
+    
+    & * {
+        font-family: var(--third-family);
+    }
+
+    & .project__subtitle {
+        text-align: center;
+        display: block;
+        margin-bottom: 18px;
+    }
+
+    & .project__title {
+        text-align: center;
+        display: block;
+        margin-bottom: 40px;
+    }
+}
+
+.workers__inner {
+    & li {
+        background: #eef0fe;
+    }
+
+    & dl {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 13px 10px;
+
+        & dt {
+            font-weight: 700;
+            font-size: 28px;
+            color: #111b4f;
+        }
+
+        & dd {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 156%;
+            color: #73737e;
+        }
+    }
+}
