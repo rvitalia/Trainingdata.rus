@@ -15,6 +15,18 @@
 
 }
 
+.statistic__inner__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include small-tablet{
+        &>img{
+            width: 100%;
+        }
+    }
+}
+
 
 .statistic__inner {
 
@@ -29,7 +41,7 @@
 }
 
 .statistic__inner__desc {
-    margin-top: 40px;
+    margin-top: clamp(20px, 5vw ,40px);
     display: block;
     text-align: center;
     font-family: var(--third-family);

@@ -55,4 +55,19 @@
     & * {
         font-family: var(--third-family);
     }
+
+    & .project__title{
+        display: block;
+
+        & small{
+            display: block;
+        }
+    }
+
+    & .container{
+        @include small-tablet{
+            display: flex !important;
+            flex-direction: column;
+        }
+    }
 }

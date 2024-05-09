@@ -6,10 +6,16 @@
 
     & .project__title {
         text-align: left;
-        margin-bottom: 40px;
+        margin-bottom: clamp(20px, 2.5vw,40px);
 
         & small {
             display: block;
+        }
+    }
+
+    &  .container{
+        @include small-tablet{
+            grid-template-columns: 1fr !important;
         }
     }
 }
@@ -19,7 +25,7 @@
     & li {
         display: block;
         font-weight: 600;
-        font-size: clamp(14px, 3vw, 20px);
+        font-size: clamp(14px, 2.2vw, 20px);
         color: #595856;
         margin-bottom: 24px;
         text-align: left;

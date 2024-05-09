@@ -1,6 +1,13 @@
 .isodataset {
     & .container {
-        padding: 0 150px;
+        padding: 0 clamp(10px, 12vw ,150px);
+
+        @include small-tablet{
+            grid-template-columns: 1fr !important;
+        }
+        @include mobile{
+            padding: 0 15px;
+        }
     }
 }
 
@@ -11,10 +18,24 @@
 
     & li {
         border-bottom: 2px solid #9a9a9a;
-        padding: 28px 0;
+        padding: clamp(10px, 3vw ,28px) 0;
         font-weight: 600;
         font-family: var(--third-family);
-        font-size: clamp(14px, 3vw, 20px);
+        font-size: clamp(14px,2vw, 20px);
         color: #595856;
+    }
+}
+
+.isodataset__img{
+    @include small-tablet{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include mobile{
+        & img{
+            max-width: 150px;
+        }
     }
 }

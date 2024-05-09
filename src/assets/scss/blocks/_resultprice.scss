@@ -11,7 +11,13 @@
     }
 
     & .project__title {
-        margin-bottom: 40px;
+        margin-bottom: clamp(20px, 4vw, 40px);
+    }
+
+    & .container{
+        @include small-tablet{
+            flex-wrap: wrap;
+        }
     }
 }
 
@@ -25,10 +31,17 @@
 .resultprice__item {
     & li {
         font-weight: 400;
-        font-size: 18px;
+        font-size: clamp(14px, 4vw, 18px);
         color: #595856;
         display: flex;
         gap: 20px;
         align-items: center;
+
+        @include small-tablet{
+            & img{
+                width: 25px;
+                height: 25px;
+            }
+        }
     }
 }

@@ -1,5 +1,9 @@
 .languages__list {
-    padding: 0 50px;
+    padding: 0 clamp(20px, 4vw, 50px);
+
+    @include small-mobile{
+        grid-template-columns: repeat(auto-fit,minmax(120px,1fr)) !important;
+    }
 
     & li {
         position: relative;

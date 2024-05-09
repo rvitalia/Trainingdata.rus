@@ -1,5 +1,5 @@
 .price {
-    padding: 100px 0;
+    padding: clamp(30px, 7vw, 100px) 0;
     background: #f3f5fc;
     font-family: var(--third-family);
 
@@ -8,7 +8,7 @@
     }
 
     & .project__title {
-        margin-bottom: 40px;
+        margin-bottom: clamp(20px, 3vw, 40px);
         line-height: 135%;
         text-transform: uppercase;
 
@@ -16,15 +16,23 @@
             display: block;
         }
     }
+
+    & .container{
+        @include small-tablet{
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 .price__inner__count {
     font-weight: 800;
-    font-size: 74px;
+    font-size: clamp(40px, 6.8vw ,74px);
     line-height: 122%;
     display: block;
     color: var(--accent-color);
-    margin-bottom: 40px;
+    margin-bottom: clamp(25px, 4vw, 40px);
+    white-space: nowrap;
 }
 
 .price__inner__include {

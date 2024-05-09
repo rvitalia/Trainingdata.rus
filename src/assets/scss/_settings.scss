@@ -85,6 +85,11 @@ section{
   border-bottom:  1px solid var(--accent-color);
   padding-bottom: 7px;
 
+  // @include tablet{
+  //   max-width: max-content;
+
+  // }
+
   &:after {
     content: '';
     background-image: url('data:image/svg+xml,%3Csvg%20width=%2214%22%20height=%2212%22%20viewBox=%220%200%2014%2012%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M8%2011L13.0008%206L8%201%22%20stroke=%22#5970F6%22%20stroke-width=%222%22%20/%3E%20%20%20%3Cpath%20d=%22M13.0008%206H0%22%20stroke=%22#5970F6%22%20stroke-width=%222%22%20/%3E%20%3C/svg%3E');
@@ -101,9 +106,9 @@ section{
   letter-spacing: 0.1em;
   margin-bottom: 20px;
 
-  @include mobile{
-    text-align: center;
-  }
+  // @include mobile{
+  //   text-align: center;
+  // }
 }
 
 .white-arrow{
@@ -148,4 +153,35 @@ html h4{
 }
 html h5{
   font-size: clamp(16px, 2vw, 20px) !important;
+}
+
+.hero__inner__item__link {
+  border: none;
+  color: var(--light-color) !important;
+  padding: clamp(12px, 3.5vw, 22px) clamp(12px, 3.5vw, 23px) !important;
+  // padding-right: 82px;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  column-gap: 34px;
+  background-color: var(--accent-color);
+  border-radius: 14px;
+  max-width: 218px;
+
+  @include tablet{
+    max-width: max-content;
+  }
+
+  &:after {
+      display: inline-flex;
+      content: '';
+      background-image: url('data:image/svg+xml, %3Csvg%20width=%2225%22%20height=%2222%22%20viewBox=%220%200%2025%2022%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M17.3387%206.63135L7.39551%2015.3666%22%20stroke=%22white%22%20stroke-width=%221.7%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20/%3E%20%20%20%3Cpath%20d=%22M10.3584%206.5874L17.3387%206.63064L17.389%2012.7639%22%20stroke=%22white%22%20stroke-width=%221.7%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20/%3E%20%3C/svg%3E');
+      width: 24px;
+      height: 21px;
+      transition: transform 0.3s linear;
+  }
+
+  &:hover:after {
+      transform: rotate(40deg);
+  }
 }

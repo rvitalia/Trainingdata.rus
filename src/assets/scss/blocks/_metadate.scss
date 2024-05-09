@@ -2,7 +2,7 @@
     display: block;
     text-align: right;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(14px, 3vw, 18px);
     line-height: 156%;
     color: #595856;
 }
@@ -10,7 +10,7 @@
 .metadate {
 
     margin-bottom: 20px;
-    
+
     & * {
         font-family: var(--third-family);
     }
@@ -22,15 +22,20 @@
 
 .metadate__inner {
 
-    & li{
+    & li {
         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-        padding: 25px 30px;
-    
+        padding: clamp(15px, 4vw, 25px) clamp(20px, 4vw, 30px);
+
         display: flex;
         gap: 15px;
         align-items: center;
         background: #f3f5fc;
         border: 2px solid #fff;
         border-radius: 8px;
+
+        font-weight: 700;
+        font-size: clamp(14px, 4vw,  18px);
+        line-height: 156%;
+        color: #222324;
     }
 }

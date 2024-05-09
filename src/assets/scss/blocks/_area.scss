@@ -12,15 +12,20 @@
 }
 
 .area__list {
+    @include for-desktop{
+        flex-wrap: wrap;
+    }
+
     & li {
+        flex: 1 0 230px;
         max-width: 380px;
-        padding: 25px 30px;
+        padding: clamp(15px, 4vw, 25px) clamp(20px, 4vw, 30px);
         border-radius: 14px;
         background: linear-gradient(180deg, hsla(0, 0%, 93%, .2), rgba(89, 112, 246, .1) 114.04%);
 
         & h3 {
             color: var(--accent-color);
-            font-size: 24px;
+            font-size: clamp(20px, 4vw, 24px);
             font-style: normal;
             font-weight: 600;
             line-height: normal;
@@ -29,7 +34,7 @@
 
         & p {
             color: #636363;
-            font-size: 18px;
+            font-size: clamp(14px, 2.5vw ,18px);
             font-style: normal;
             font-weight: 500;
             line-height: normal;

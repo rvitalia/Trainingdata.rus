@@ -3,9 +3,13 @@
     flex-direction: column;
     gap: 26px;
 
+    @include desktop1250{
+        margin-bottom: 20px;
+    }
+
     & li {
         font-weight: 400;
-        font-size: 16px;
+        font-size: clamp(14px, 2vw ,16px);
         line-height: 156%;
         color: #dfdfdf;
         display: flex;
@@ -15,8 +19,8 @@
 
 
     & span {
-        width: 60px;
-        height: 60px;
+        width: clamp(35px, 4.5vw, 60px);
+        height: clamp(35px, 4.5vw, 60px);
         background-color: white;
         border-radius: 50%;
         color: var(--accent-color);
@@ -25,7 +29,7 @@
         align-items: center;
         margin-right: 22px;
         font-weight: 700;
-        font-size: 22px;
+        font-size: clamp(20px, 3wv, 22px);
         line-height: 145%;
         text-align: center;
         color: #5970f6;
@@ -34,7 +38,7 @@
 }
 
 .description {
-    padding-top: 130px;
+    padding-top: clamp(40px, 9vw, 130px);
     position: relative;
 
     & * {
@@ -52,15 +56,36 @@
         left: 0;
         right: 0;
         z-index: -1;
+
+        @include desktop1250{
+            bottom: 0;
+            height: 100%;
+        }
     }
 
     & .project__subtitle {
         display: block;
-        margin-bottom: 48px;
+        margin-bottom: clamp(20px, 4vw, 48px);
     }
 
     & .project__title {
         display: block;
         margin-bottom: 35px;
+    }
+}
+
+.description__inner__item{
+    & .hero__inner__item__link{
+        @include desktop1250{
+            border: 2px solid white;
+            white-space: nowrap;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.description__inner{
+    @include mobile{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
     }
 }
