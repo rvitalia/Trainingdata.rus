@@ -58,7 +58,7 @@
             
             <section class="dhero section" style="margin-top: 20px;">
                 <div class="container__dataset"
-                    style="display: grid; grid-template-columns: minmax(400px, 820px) minmax(450px, 695px);  gap: clamp(40px, 7vw, 140px);">
+                    style="display: grid; grid-template-columns: minmax(400px, 820px) minmax(350px, 695px);  gap: clamp(40px, 6vw, 140px);">
                     <div class="dhero__img">
                         <img src="./assets/images/dhero/Frame11712749621.png" alt="main photo" width="820" height="820">
                     </div>
@@ -70,9 +70,9 @@
                             <dt>СТОИМОСТь:</dt>
                             <dd class="h-reset">11 000 РУБ</dd>
                         </dl>
-                        <a href="" class="hero__inner__item__link dhero__inner__link" style="margin-top: 23px;">Купить датасет</a>
-                        <ul class="list-reset dhero__inner__list"
-                            style="display: flex; align-items: center; flex-wrap: wrap; gap: clamp(40px, 6.5vw, 100px);">
+                        <a href="" class="hero__inner__item__link dhero__inner__link">Купить датасет</a>
+                        <ul class="list-reset dhero__inner__list desktop"
+                            style="display: flex; align-items: center; flex-wrap: wrap; gap: clamp(20px, 4.5vw, 100px);">
                             <li>
                                 <dl class="h-reset">
                                     <dt>1055</dt>
@@ -101,6 +101,33 @@
                     </div>
                 </div>
                 <div class="container" style="margin: clamp(30px, 7vw, 140px) auto;">
+                    <ul class="list-reset dhero__inner__list tablet"
+                            style="display: flex; align-items: center; flex-wrap: wrap; gap: clamp(20px, 4.5vw, 100px); margin-bottom: 30px;">
+                            <li>
+                                <dl class="h-reset">
+                                    <dt>1055</dt>
+                                    <dd class="h-reset">фотографий</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="h-reset">
+                                    <dt>211</dt>
+                                    <dd class="h-reset">мужчин</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="h-reset">
+                                    <dt>5</dt>
+                                    <dd class="h-reset">ракурсов съемки</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="h-reset">
+                                    <dt>6</dt>
+                                    <dd class="h-reset">стадий потери волос</dd>
+                                </dl>
+                            </li>
+                        </ul>
                     <ul class="list-reset dhero__benefits" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center;">
                         <li>
                             Медицина
@@ -176,6 +203,11 @@
                 <div class="container">
                     <div class="specification__img">
                         <img src="./assets/images/specification/image 8789.png" alt="img" width="1447" height="451">
+                    </div>
+            
+                    <div class="specification__row">
+                        <img src="./assets/images/specification/image 8789 (2) 2.png" alt="" width="670" height="1017">
+                        <img src="./assets/images/specification/image 8789 (2) 2.png" alt="" width="670" height="1017">
                     </div>
                 </div>
             </section>
@@ -328,7 +360,9 @@
                         <li><img src="./assets/images/metadate/check.svg" alt="check" width="30" height="30">Extension</li>
                         <li><img src="./assets/images/metadate/check.svg" alt="check" width="30" height="30">Resolution</li>
                     </ul>
-            
+                    <div class="metadate__img">
+                        <img src="./assets/images/metadate/Rectangle1000515.png" alt="" width="820" height="250">
+                    </div>
                 </div>
             </section>
             
@@ -495,14 +529,18 @@
                     </ul>
                     <div class="isodataset__img">
                         <img src="./assets/images/iso/image-8899.svg" alt="iso" width="234" height="216">
+                        <img src="./assets/images/iso/image 8900.svg" alt="iso" width="234" height="216">
                     </div>
                 </div>
             </section>
             
             <section class="languages pt130 section">
                 <div class="container">
-                    <h2 class="project__title h-reset">Languages <small>in the dataset</small></h2>
-                    <ul class="languages__list list-reset" style="grid-template-columns: repeat(auto-fit,minmax(185px,1fr));display: grid;gap: 10px;">
+                    <div class="languages__row">
+                        <h2 class="project__title h-reset">Языки, <small>используемые в датасете</small></h2>
+                        <p class="h-reset languages__row__text">В сете 5 фотографий с разных ракурсов: анфас, вид сверху, затылок, левая сторона и правая сторона</p>
+                    </div>
+                    <ul class="languages__list list-reset" style="column-count: 3; column-gap: 10px;">
                         <li>country</li>
                         <li>country</li>
                         <li>country</li>
@@ -537,23 +575,28 @@
             
             <section class="area section pt130">
                 <div class="container">
-                    <h2 class="project__title h-reset">APPLICATION AREAS  <small>OF THE DATASET </small></h2>
-                    <ul class="list-reset area__list" style="display: flex; justify-content: center; gap: 30px;">
+                    <span class="project__subtitle --accent">Облать применения датасета</span>
+                    <h2 class="project__title h-reset">Датасет используется</h2>
+                    <ul class="list-reset area__list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
                         <li>
-                            <h3 class="area__list__title h-reset"> Language modeling and generation: </h3>
-                            <p class="h-reset">  Data to improve language models and generation capabilities in natural language processing applications </p>
+                            <h3 class="area__list__title h-reset"> Биометрическая идентификация:</h3>
+                            <span class="area_list__count">01</span>
+                            <p class="h-reset">  Классификация и компьютерное зрение для распознавания лиц, биометрической аутентификации и предотвращения мошеннической деятельности </p>
                         </li>
                         <li>
-                            <h3 class="area__list__title h-reset"> Language modeling and generation: and generation:  </h3>
-                            <p class="h-reset">  Data to improve language models and generation capabilities in natural language processing applications </p>
+                            <h3 class="area__list__title h-reset"> Language modeling Биометрическая идентификация:</h3>
+                            <span class="area_list__count">01</span>
+                            <p class="h-reset">  Классификация и компьютерное зрение для распознавания лиц, биометрической аутентификации и предотвращения мошеннической деятельности </p>
                         </li>
                         <li>
-                            <h3 class="area__list__title h-reset"> Language modeling and generation: </h3>
-                            <p class="h-reset">  Data to improve language models and generation capabilities Data to improve language models and generation capabilities in natural language processing applications </p>
+                            <h3 class="area__list__title h-reset"> Биометрическая идентификация:</h3>
+                            <span class="area_list__count">01</span>
+                            <p class="h-reset">  Классификация и компьютерное зрение для распознавания лиц, биометрической аутентификации и предотвращения мошеннической деятельностиion capabilities in natural language processing applications </p>
                         </li>
                         <li>
-                            <h3 class="area__list__title h-reset"> Language modeling and generation: </h3>
-                            <p class="h-reset">  Data to improve language models and generation capabilities in natural language processing applications </p>
+                            <h3 class="area__list__title h-reset"> Биометрическая идентификация:</h3>
+                            <span class="area_list__count">01</span>
+                            <p class="h-reset">  Классификация и компьютерное зрение для распознавания лиц, биометрической аутентификации и предотвращения мошеннической деятельности </p>
                         </li>
                     </ul>
                 </div>
@@ -569,6 +612,8 @@
                             <li> People from 170 countries </li>
                             <li> The dataset complies with the requirements of ISO 30107-3 for Bona Fide Presentation </li>
                         </ul>
+                        <a href="" class="hero__inner__item__link">Перейти</a>
+            
                     </div>
                     <div class="ddescription__right">
                         <img src="./assets/images/description/19.png.webp" alt="desc" width="600" height="600">
@@ -651,6 +696,22 @@
                     </div>
                 </div>
                 <div class="order__bg" style="width: clamp(300px, 44vw, 479px); background: #5970f6;"></div>
+            </section>
+            
+            <section class="documents section pt130">
+                <div class="container">
+                    <span class="project__subtitle --accent">Документы</span>
+                    <h2 class="project__title h-reset">Документы в датасете</h2>
+                    <ul class="documents__inner list-reset">
+                        <li>Паспорт <span>01</span></li>
+                        <li>Паспорт Паспорт <span>01</span></li>
+                        <li>Паспорт <span>01</span></li>
+                        <li>Паспорт <span>01</span></li>
+                        <li>Паспорт <span>01</span></li>
+                        <li>Паспорт <span>01</span></li>
+                        <li>Паспорт <span>01</span></li>
+                    </ul>
+                </div>
             </section>
         </main>
         <footer

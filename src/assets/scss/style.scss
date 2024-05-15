@@ -26,41 +26,41 @@ html,body{
 
 @import 'blocks/container';
 @import 'blocks/page';
-@import 'blocks/header';
+// @import 'blocks/header';
 // первая страница
-@import 'blocks/hero';
-@import 'blocks/brands';
-@import 'blocks/services';
-@import 'blocks/industry';
-@import 'blocks/countries';
-@import 'blocks/cases';
-@import 'blocks/about';
-@import 'blocks/reviewes';
-@import 'blocks/journal';
+// @import 'blocks/hero';
+// @import 'blocks/brands';
+// @import 'blocks/services';
+// @import 'blocks/industry';
+// @import 'blocks/countries';
+// @import 'blocks/cases';
+// @import 'blocks/about';
+// @import 'blocks/reviewes';
+// @import 'blocks/journal';
 // конец первой страницы
 // вторая страница
-@import 'blocks/shero';
-@import 'blocks/brands';
-@import 'blocks/markup';
-@import 'blocks/types';
-@import 'blocks/stages';
-@import 'blocks/timeplan';
-@import 'blocks/fluence';
+// @import 'blocks/shero';
+// @import 'blocks/brands';
+// @import 'blocks/markup';
+// @import 'blocks/types';
+// @import 'blocks/stages';
+// @import 'blocks/timeplan';
+// @import 'blocks/fluence';
 
 //страница блога
-@import 'blocks/blog';
+// @import 'blocks/blog';
 //страница блога-single
-@import 'blocks/single';
+// @import 'blocks/single';
 
 //страница партнеров
-@import 'blocks/partners';
-@import 'blocks/business';
-@import 'blocks/bigpartners';
-@import 'blocks/order';
+// @import 'blocks/partners';
+// @import 'blocks/business';
+// @import 'blocks/bigpartners';
+// @import 'blocks/order';
 
 // команда
-@import 'blocks/team';
-@import 'blocks/tcase';
+// @import 'blocks/team';
+// @import 'blocks/tcase';
 // @import 'blocks/order';
 // датасет
 @import 'blocks/dhero';
@@ -77,9 +77,10 @@ html,body{
 @import 'blocks/languages';
 @import 'blocks/area';
 @import 'blocks/ddescription';
-// @import 'blocks/order';
+@import 'blocks/order';
+@import 'blocks/documents';
 
-@import 'blocks/footer';
+// @import 'blocks/footer';
 
 
 
