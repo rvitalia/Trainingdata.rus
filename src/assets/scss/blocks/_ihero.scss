@@ -1,0 +1,56 @@
+.ihero {
+    position: relative;
+    margin-top: 20px;
+
+    & .project__subtitle {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    & h1 {
+        display: block;
+        font-weight: 400 !important;
+        // font-size: 74px;
+        line-height: 108%;
+        color: #222324;
+        margin-bottom: 28px;
+
+        &>b {
+            font-weight: 700;
+        }
+    }
+
+    & .container__partners{
+        @include for-desktop{
+            grid-template-columns: 1fr !important;
+        }
+    }
+}
+
+.ihero__right{
+    @include for-desktop{
+        max-width: 800px;
+    }
+}
+
+.ihero__left__desc {
+    max-width: 519px;
+    font-weight: 600;
+    font-size: clamp(14px, 3.5vw, 18px);
+    line-height: 156%;
+    color: #222324;
+}
+
+.industry__bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: -1;
+}
+.industry__bg2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}

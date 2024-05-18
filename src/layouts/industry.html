@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  {{> head }}
+</head>
+
+<body>
+  <div class="page">
+    {{> header }}
+
+    <main class="main">
+      {{> body }}
+    </main>
+    {{> footer }}
+
+  </div>
+  <script>
+    function addHoverClass(element) {
+      element.classList.add('active');
+    }
+
+    function removeHoverClass(element) {
+      element.classList.remove('active');
+    }
+  </script>
+  <script>
+    const swiperReviews = new Swiper('.swiper__reviews', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 45,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        200: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        // when window width is >= 480px
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        // when window width is >= 640px
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 45
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
