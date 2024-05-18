@@ -79,6 +79,7 @@ html,body{
 @import 'blocks/ddescription';
 // @import 'blocks/order';
 @import 'blocks/documents';
+@import 'blocks/controls';
 
 // страница industry
 @import 'blocks/ihero';
@@ -86,6 +87,17 @@ html,body{
 // @import 'blocks/brands';
 // @import 'blocks/about';
 // @import 'blocks/stages';
+
+// страница okk
+// @import 'blocks/ihero';
+// @import 'blocks/brands';
+// @import 'blocks/markup';
+ @import 'blocks/odescription';
+ //  @import 'blocks/timeplan';
+ @import 'blocks/okkneed';
+ @import 'blocks/expertise';
+ @import 'blocks/individual';
+
 
 
 @import 'blocks/footer';

@@ -1,0 +1,12 @@
+.odescription {
+    padding-bottom: 130px;
+
+    & .markup__inner__large{
+        max-height: 420px;
+        top: clamp(-40px, 9vw, -130px) !important;
+    }
+
+    & .markup__inner__small{
+        top: 130px;
+    }
+}

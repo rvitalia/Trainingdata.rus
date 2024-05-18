@@ -28,6 +28,15 @@
     })
 </script>
 <script>
+    function addHoverClass(element) {
+      element.classList.add('active');
+    }
+
+    function removeHoverClass(element) {
+      element.classList.remove('active');
+    }
+  </script>
+<script>
     document.addEventListener('DOMContentLoaded', function () {
     const accordionItems = document.querySelectorAll('.accordion-item');
 

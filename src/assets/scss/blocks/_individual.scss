@@ -1,0 +1,15 @@
+.individual{
+    & .hero__inner__item__link{
+        max-width: 265px;
+        margin-top: 40px;
+        align-items: center;
+
+        &::after{
+            flex-shrink: 0;
+        }
+    }
+
+    & .ihero__left__desc{
+        font-weight: 400;
+    }
+}
