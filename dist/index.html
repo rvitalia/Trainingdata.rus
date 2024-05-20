@@ -635,4 +635,13 @@
                 var target = element.querySelector(targetSelector);
                 if (target) {
                     target.classList.remove(className);
-                    var previousElement = target.previousElementSibling
+                    var previousElement = target.previousElementSibling;
+                    window.innerWidth > 991 ? previousElement.style.bottom = "50px" : previousElement.style.bottom = "30px";
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
