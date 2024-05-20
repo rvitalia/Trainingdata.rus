@@ -12,4 +12,15 @@
     & .ihero__left__desc{
         font-weight: 400;
     }
+
+    & .container__dataset{
+        @include tablet{
+            display: flex !important;
+            flex-direction: column-reverse !important;
+        }
+
+        & .ihero__right{
+            max-width: 600px;
+        }
+    }
 }

@@ -35,7 +35,12 @@
                 
                 <nav>
                     <ul class="header__inner__menu list-reset">
-                        <li class="menu-item-has-children"><a href="">Датасеты</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="">Датасеты</a>
+                            <ul>
+                                <li><a href="">Сбор данных </a></li>
+                            </ul>
+                        </li>
                         <li class="menu-item-has-children"><a href="./services.html">Услуги</a></li>
                         <li class="menu-item-has-children"><a href="">Индустрии</a></li>
                         <li class="menu-item-has-children"><a href="">Кейсы</a></li>
@@ -296,13 +301,4 @@
         <script>
             const burgerBtn = document.getElementById('burger-btn');
         
-            burgerBtn.addEventListener('click', function () {
-                burgerBtn.classList.toggle('burger-close');
-            });
-        
-        </script>
-    </div>
-
-</body>
-
-</html>
+  

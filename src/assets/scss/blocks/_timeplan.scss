@@ -219,6 +219,12 @@
                 }
             }
         }
+
+        @media (max-width: 400px){
+            &::after, &::before{
+                display: none;
+            }
+        }
     }
 }
 

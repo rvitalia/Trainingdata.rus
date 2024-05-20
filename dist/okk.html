@@ -35,7 +35,12 @@
                 
                 <nav>
                     <ul class="header__inner__menu list-reset">
-                        <li class="menu-item-has-children"><a href="">Датасеты</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="">Датасеты</a>
+                            <ul>
+                                <li><a href="">Сбор данных </a></li>
+                            </ul>
+                        </li>
                         <li class="menu-item-has-children"><a href="./services.html">Услуги</a></li>
                         <li class="menu-item-has-children"><a href="">Индустрии</a></li>
                         <li class="menu-item-has-children"><a href="">Кейсы</a></li>
@@ -111,7 +116,7 @@
                 <img class="markup__bg" src="./assets/images/markup/bg.svg" alt="bg" width="610" height="412" loading="lazy">
             </section>
             
-            <section class="timeplan pt130" style="position: relative;">
+            <section class="timeplan pt130 okkplan" style="position: relative;">
                 <div class="container timeplan__inner"
                     style="display: grid; grid-template-columns: minmax(150px, 430px) minmax(600px, 900px); gap: clamp(40px, 4vw, 80px);">
                     <div class="timeplan__inner__item">
@@ -210,7 +215,7 @@
             
             <section class="expertise section pt130">
                 <div class="container">
-                    <div class="expertise__row" style="display:  flex; align-items: center; justify-content: space-between;">
+                    <div class="expertise__row" style="display:  flex; justify-content: space-between;">
                         <div class="expertise__row__left">
                             <p class="project__subtitle --accent">Контроль качества</p>
                             <h2 class="h-reset project__title"> <small>Из чего состоит </small><br> <b>экспертиза ОКК?</b></h2>
@@ -268,7 +273,7 @@
             
             <section class="ihero individual pt130">
                 <div class="container__dataset"
-                    style="display: grid; grid-template-columns: minmax(550px, 960px) minmax(450px, 695px); gap: clamp(30px, 4vw, 90px);">
+                    style="display: grid; grid-template-columns: minmax(450px, 960px) minmax(450px, 695px); gap: clamp(30px, 4vw, 90px);">
                     <div class="ihero__right">
                         <img src="./assets/images/individual/CTA.png" alt="ihero" width="882" height="563">
                     </div>
@@ -439,13 +444,4 @@
         <script>
             const burgerBtn = document.getElementById('burger-btn');
         
-            burgerBtn.addEventListener('click', function () {
-                burgerBtn.classList.toggle('burger-close');
-            });
-        
-        </script>
-    </div>
-
-</body>
-
-</html>
+  

@@ -35,7 +35,12 @@
                 
                 <nav>
                     <ul class="header__inner__menu list-reset">
-                        <li class="menu-item-has-children"><a href="">Датасеты</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="">Датасеты</a>
+                            <ul>
+                                <li><a href="">Сбор данных </a></li>
+                            </ul>
+                        </li>
                         <li class="menu-item-has-children"><a href="./services.html">Услуги</a></li>
                         <li class="menu-item-has-children"><a href="">Индустрии</a></li>
                         <li class="menu-item-has-children"><a href="">Кейсы</a></li>
@@ -630,13 +635,4 @@
                 var target = element.querySelector(targetSelector);
                 if (target) {
                     target.classList.remove(className);
-                    var previousElement = target.previousElementSibling;
-                    window.innerWidth > 991 ? previousElement.style.bottom = "50px" : previousElement.style.bottom = "30px";
-                }
-            }
-        }
-
-    </script>
-</body>
-
-</html>
+                    var previousElement = target.previousElementSibling

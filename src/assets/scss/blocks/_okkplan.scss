@@ -1,0 +1,7 @@
+.okkplan{
+    & .timeplan__inner__item {
+        & li:nth-child(3):after{
+            display: none;
+        }
+    }
+}
