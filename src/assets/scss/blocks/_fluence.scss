@@ -52,6 +52,7 @@
     max-width: max-content;
     margin-left: auto;
     margin-right: auto;
+    margin-top: clamp(20px,3vw, 40px);
 
     &:after {
         display: inline-flex;

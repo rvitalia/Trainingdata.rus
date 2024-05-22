@@ -14,6 +14,14 @@
         position: relative;
         max-width: 900px;
 
+        @include for-desktop{
+            max-width: 600px;
+        }
+        @include tablet{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         &>a {
             position: absolute;
             right: 30px;
@@ -60,7 +68,7 @@
         
         @include mobile{
             display: grid;
-            grid-template-columns: 78px 1fr;
+            grid-template-columns: 50px 1fr;
             gap: 10px;
             align-items: center;
         }
@@ -114,6 +122,13 @@
 .about__inner__item__wrapper__image {
     max-width: 156px;
     margin-bottom: 22px;
+
+    & img{
+        @include small-tablet{
+            width: 50px;
+            height: 50px;
+        }
+    }
 
     @include mobile{
         margin-bottom: 0;

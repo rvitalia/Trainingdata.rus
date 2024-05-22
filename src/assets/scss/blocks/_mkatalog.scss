@@ -1,0 +1,243 @@
+.mkatalog__filter {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 17px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet{
+        flex-wrap: wrap;
+    }
+
+    & li {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 137%;
+        color: var(--accent-color);
+    }
+}
+
+.mkatalog__sidebar{
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    @include small-tablet{
+        flex-direction: column;
+    }
+}
+
+.mkatalog__sidebar__type {
+    padding: 14px 0;
+
+    @include tablet{
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+    @include small-tablet{
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    & button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        width: 100%;
+
+
+        & .mkatalog__sidebar__type__head {
+            font-weight: 600;
+            font-size: 16px;
+            color: #1c1c1c;
+        }
+
+        & svg {
+            fill: var(--accent-color);
+            transform: rotate(180deg);
+            transition: all 0.3s linear;
+        }
+
+        &.hidden {
+            & svg {
+                fill: #989898;
+                transform: rotate(0);
+            }
+        }
+    }
+
+    &>ul {
+        transform-origin: 0 0;
+        transition: all 0.3s linear;
+        opacity: 0;
+        visibility: hidden;
+        transform: rotateX(90deg);
+
+        @include small-tablet{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        &.show {
+            margin-top: 0 !important;
+            visibility: visible;
+            opacity: 1;
+            transform: rotate(0);
+        }
+
+        &>li {
+
+            &:not(:first-child) {
+                margin-top: 12px;
+
+                @include small-tablet{
+                    margin-top: 0;
+                }
+            }
+
+            &>label {
+                font-weight: 500;
+                font-size: 16px;
+                color: #6a6a6a;
+                display: flex;
+                gap: 13px;
+                align-items: center;
+
+                & input {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    &+& {
+        border-top: 1px solid #e0e0e0;
+
+        @include tablet{
+            border: none;
+        }
+    }
+}
+
+.mkatalog__main {
+
+    & .catalog__inner{
+        margin-top: 40px;
+    }
+
+    & .hero__inner__item__link{
+        margin-top: 40px !important;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+}
+
+.mkatalog__main__row{
+    @include mobile{
+        flex-wrap: wrap;
+    }
+}
+
+.mkatalog__main__row__search {
+    & form {
+        border: 1px solid #dee2e7;
+        display: flex;
+        align-items: center;
+
+
+        & input {
+            border: none;
+            padding: 10px 12px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #989898;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+
+        & svg {
+            padding: 8px;
+            width: 37px;
+            height: 37px;
+        }
+    }
+}
+
+.mkatalog__main__row__sort {
+    & select {
+        border: 1px solid #dee2e7;
+        font-weight: 500;
+        font-size: 14px;
+        color: #989898;
+        padding: 12px;
+        background: transparent;
+
+        & option{
+            background: white;
+        }
+    }
+}
+
+.mkatalog__main{
+    & .catalog__inner__img{
+        & img{
+            max-height: 264px;
+            max-width: 368px;
+        }
+
+        & img{
+            &:nth-child(2){
+                transform-origin: 0 0;
+                transform: rotateY(90deg) rotateX(90deg) rotateZ(90deg);
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                inset: 0;
+                transition: all 0.3s linear;
+            }
+        }
+        &:hover {
+            @media(min-width: 768px){
+                & img:nth-child(2) {
+                 transform: rotateY(0) rotateX(0) rotateZ(0);
+                 opacity: 1;
+                 visibility: visible;
+                }
+            }
+       }
+    }
+
+    & article{
+        @include small-tablet{
+            max-width: 370px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.mkatalog {
+    & .container{
+        &:nth-child(2){
+
+            @include tablet{
+                grid-template-columns: 1fr !important;
+            }
+        }
+    }
+}

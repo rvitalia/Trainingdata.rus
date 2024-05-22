@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    <div class="page">
+        {{> header }}
+
+        <main class="main">
+            {{> body }}
+        </main>
+        {{> footer }}
+
+        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <symbol viewBox="0 0 24 24" id="arrow__down">
+                <path d="M12 8.29492L6 14.2949L7.41 15.7049L12 11.1249L16.59 15.7049L18 14.2949L12 8.29492Z" />
+            </symbol>
+        </svg>
+        <script>
+            function hideLists(){
+                addEventListener('DOMContentLoaded',()=>{
+                    const listFilters = document.querySelectorAll('.mkatalog__sidebar__type>ul');
+                    console.log(listFilters);
+                    if(listFilters.length > 0){
+                        listFilters.forEach(element => {
+                            element.style.marginTop = `-${element.offsetHeight}px`;
+                            console.log(`-${element.offsetHeight}`+ 'px');
+                        });
+                    }
+                })
+            }
+            hideLists();
+        </script>
+
+        <script>
+            function showList(elem){
+                elem.classList.toggle('hidden');
+                elem.nextElementSibling.classList.toggle('show');
+            }
+        </script>
+
+    </div>
+
+</body>
+
+</html>

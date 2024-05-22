@@ -1,0 +1,40 @@
+.markethero {
+    margin-top: 22px;
+
+    & .container__partners{
+        @media(max-width: 1200px){
+            align-items: center !important;
+        }
+        @include for-desktop{
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+}
+
+.markethero__left {
+    & h1 {
+        font-weight: 800;
+        line-height: 122%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.markethero__left__desc {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: clamp(24px, 4vw ,34px);
+    color: #222324;
+    max-width: 470px;
+    margin-bottom: 28px;
+}
+
+.markethero__left__text {
+    font-weight: 400;
+    font-size: clamp(16px, 4vw, 18px);
+    line-height: 156%;
+    color: #73737e;
+    max-width: 688px;
+    margin-bottom: 28px;
+}

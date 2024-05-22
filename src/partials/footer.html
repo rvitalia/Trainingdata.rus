@@ -78,3 +78,14 @@
     });
 
 </script>
+<script>
+    let subMenu = document.querySelectorAll('.sub-menu');
+    if(subMenu.length >= 1){
+        subMenu.forEach(menu => {
+            let items = menu.querySelectorAll('a');
+            items.forEach(element => {
+                element.textContent == 'Все услуги' ? element.parentElement.classList.add('service') : '';
+            });
+        });
+    }
+</script>

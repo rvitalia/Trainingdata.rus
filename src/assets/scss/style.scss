@@ -92,13 +92,23 @@ html,body{
 // @import 'blocks/ihero';
 // @import 'blocks/brands';
 // @import 'blocks/markup';
- @import 'blocks/odescription';
- //  @import 'blocks/timeplan';
- @import 'blocks/okkneed';
- @import 'blocks/expertise';
- @import 'blocks/individual';
- @import 'blocks/okkplan';
+@import 'blocks/odescription';
+//  @import 'blocks/timeplan';
+@import 'blocks/okkneed';
+@import 'blocks/expertise';
+@import 'blocks/individual';
+@import 'blocks/okkplan';
 // @import 'blocks/order';
+
+
+// страница data-market
+@import 'blocks/markethero';
+@import 'blocks/quality';
+@import 'blocks/marketdesc';
+@import 'blocks/mkatalog';
+// @import 'blocks/catalog';
+// @import 'blocks/fluence';
+// @import 'blocks/about';
 
 
 @import 'blocks/footer';
